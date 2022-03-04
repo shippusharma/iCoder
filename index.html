@@ -1,0 +1,415 @@
+<!doctype html>
+<!-- created by-> Shippu Sharma -->
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>iCoder</title>
+</head>
+
+<body>
+    <!-- nav Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html"><i class="bi bi-journal-code"></i><b> iCoder</b></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation primary">
+                <span class="navbar-toggler-icon toggler-icon-light"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link " aria-current="page" href="index.html">
+                            <i class="bi bi-house-fill"></i><b>Home</b></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="blog.html"><b>Blog</b></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href="videos.html"><b>Videos</b></a>
+                    </li>
+
+                    <li class="nav-item dropdown active">
+                        <a class="nav-link dropdown-toggle action" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            <b>Topics</b>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item " href="technology.html"><b>Technology</b></a></li>
+                            <li><a class="dropdown-item " href="webtechnology.html"><b>Web Development</b></a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="support.html"><b>Support</b></a></li>
+                            <li><a class="dropdown-item" href="writeforus.html"><b>Write for us</b></a></li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link " href=about.html "><b>About</b></a>
+                    </li>
+                    <li class=" nav-item active">
+                            <a class="nav-link " href=contact.html "><b>Contact us</b></a>
+                    </li>
+
+                </ul>
+                <form class=" d-flex">
+
+                                <input class="form-control me-2" type="search" placeholder="Search "
+                                    aria-label="Search">
+                                <button class="btn btn-outline-warning" type="submit"><b>Search</b></button>
+                                </form>
+                                <hr>
+                                <div class="mx-2">
+                                    <div class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                                        Login</div>
+                                    <div class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#SignupModal">
+                                        Sign Up</div>
+                                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="LoginModalLabel">Login to iCoder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-primary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Sigh Up Modal -->
+    <div class="modal fade" id="SignupModal" tabindex="-1" aria-labelledby="SignupModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="SignupModalLabel">Create a Account to iCoder</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp">
+                            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputPassword1" class="form-label">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1">
+                        </div>
+                        <div class="mb-3">
+                            <label for="confirmexampleInputPassword1" class="form-label">Confirm Password</label>
+                            <input type="password" class="form-control" id="confirmexampleInputPassword1">
+                        </div>
+                        <div class="mb-3 form-check">
+                            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Cancel</button>
+                        <button type="submit" class="btn btn-primary">Create Account</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- carousel  -->
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="img-fluid" src="3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h2><b>Welcome to iCoder</b> </h2>
+                    <p>
+                    <h5>latest Blog, Technology, Updates, Coding and Videos </h5>
+                    </p>
+                    <a href="blog.html" class="btn  btn-outline-warning text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Blogs</a>
+                    <a href="technology.html" class="btn btn-outline-primary text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Technology</a>
+                    <a href="webtechnology.html" class="btn btn-outline-danger text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Web Technology</a>
+                    <a href="tech.html" class="btn btn-outline-success text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Fun Tech</a>
+                    <a href="videos.html" class="btn btn-outline-info text-light" tabindex="-1" role="button"
+                        aria-disabled="true">videos</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid" src="2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>The Best Blog/Vlog and Technolgy contact</h3>
+                    <p>
+                    <h5>latest Blog, Technology, Updates, Coding and Videos </h5>
+                    </p>
+                    <a href="blog.html" class="btn btn-outline-warning text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Blogs</a>
+                    <a href="technology.html" class="btn btn-outline-primary text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Technology</a>
+                    <a href="webtechnology.html" class="btn btn-outline-secondary text-light" tabindex="-1"
+                        role="button" aria-disabled="true">Web Technology</a>
+                    <a href="tech.html" class="btn btn-outline-success text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Fun Tech</a>
+                    <a href="videos.html" class="btn btn-outline-info text-light" tabindex="-1" role="button"
+                        aria-disabled="true">videos</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img class="img-fluid" src="1.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h4>The Best Coding Contant and Best Videos Contant </h4>
+                    <p>
+                    <h5>latest Blog, Technology, Updates, Coding and Videos </h5>
+                    </p>
+                    <a href="blog.html" class="btn btn-outline-warning text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Blogs</a>
+                    <a href="technology.html" class="btn btn-outline-primary text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Technology</a>
+                    <a href="webtechnology.html" class="btn btn-outline-secondary text-light" tabindex="-1"
+                        role="button" aria-disabled="true">Web Technology</a>
+                    <a href="tech.html" class="btn btn-outline-success text-light" tabindex="-1" role="button"
+                        aria-disabled="true">Fun Tech</a>
+                    <a href="videos.html" class="btn btn-outline-info text-light" tabindex="-1" role="button"
+                        aria-disabled="true">videos</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- card 1 -->
+    <div class="row mb-2 my-2 mx-4 ">
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Latest Blog</strong>
+                    <h3 class="mb-0">Blogs Featured</h3>
+                    <div class="mb-1 text-muted">july 26</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                        lead-in to
+                        additional content.</p>
+                    <a href="blog.html" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto  d-lg-block ">
+                    <img class="bd-placeholder-img img-fluid" width="300" height="250" src="thumb2.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Latest Blog</strong>
+                    <h3 class="mb-0">Blogs Featured</h3>
+                    <div class="mb-1 text-muted">july 26</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                        lead-in to
+                        additional content.</p>
+                    <a href="blog.html" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto  d-lg-block ">
+                    <img class="bd-placeholder-img img-fluid" width="300" height="250" src="thumb1.jpg" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="row mb-2 my-2 mx-4">
+
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-primary">Coding videos</strong>
+                    <h3 class="mb-0">Featured videos</h3>
+                    <div class="mb-1 text-muted">Aug 12</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural
+                        lead-in to
+                        additional content.</p>
+                    <a href="videos.html" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto  d-lg-block">
+                    <img class="bd-placeholder-img img-fluid" width="300" height="250" src="thumb3.jpg" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <strong class="d-inline-block mb-2 text-success">Fun Tech</strong>
+                    <h3 class="mb-0">Fun with Technology</h3>
+                    <div class="mb-1 text-muted">Aug 11</div>
+                    <p class="mb-auto">This is a wider card with supporting text below as a natural lead-in to
+                        additional content.</p>
+                    <a href="tech.html" class="stretched-link">Continue reading</a>
+                </div>
+                <div class="col-auto  d-lg-block">
+                    <img class="bd-placeholder-img img-fluid" width="300" height="250" src="thumb4.JPG" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <!-- Footer 
+    <hr>
+    <footer class="my-3 pt-5 text-muted text-center text-small  bg-dark">
+        <p class="mb-1 text-light"><b>iCoder © 2021-22 | Shippu Sharma</b> </p>
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+    </footer> -->
+
+
+
+    <!-- Footer  -->
+    <hr>
+    <footer class=" pt-5  text-center text-small  bg-dark text-light">
+        <!-- <p class=" text-light"><b>iCoder © 2021-22 | Shippu Sharma</b> </p> -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 footer-contact">
+                        <h2><i class="bi bi-journal-code"></i> iCoder</h2>
+                        <p>
+                        <h6>Address :</h6>
+                        Hirapur <br>
+                        Raipur <br>
+                        Chhattisgarh <br><br>
+                        <strong>Phone:</strong> +123456789<br>
+                        <strong>Email:</strong> info@example.com<br>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4><i class="bi bi-link-45deg"></i> Links</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="about.html">About us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="contact.html">Contact us</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="videos.html">Video</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="blog.html">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4><i class="bi bi-collection"></i> Our Services</h4>
+                        <ul>
+                            <li><i class="bx bx-chevron-right"></i> <a href="technology.html">Technolgy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="webtechnology.html">Web Technolgy</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="tech.html">Fun Tech</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="support.html">Support</a></li>
+                            <li><i class="bx bx-chevron-right"></i> <a href="writeforus.html">Wright for us</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 footer-links">
+                        <h4><i class="bi bi-share"></i> Social Media</h4>
+                        <!-- <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
+                        <div class="social-links mt-3">
+                            <ul>
+                                <li><a href="#" class="twitter"><i class="bx bxl-twitter"></i><i
+                                            class="bi bi-twitter"></i> Twitter</a></li>
+                                <li><a href="#" class="facebook"><i class="bx bxl-facebook"></i><i
+                                            class="bi bi-facebook"></i> Facebook</a></li>
+                                <li><a href="#" class="instagram"><i class="bx bxl-instagram"></i><i
+                                            class="bi bi-instagram"></i> Instagram</a></li>
+                                <li><a href="#" class="github"><i class="bx bxl-skype"></i><i class="bi bi-github"></i>
+                                        Git-GitHub</a></li>
+                                <li><a href="#" class="linkedin"><i class="bx bxl-linkedin"></i><i
+                                            class="bi bi-linkedin"></i> Linkedin</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <ul class="list-inline">
+            <li class="list-inline-item"><a href="#">Privacy</a></li>
+            <li class="list-inline-item"><a href="#">Terms</a></li>
+            <li class="list-inline-item"><a href="#">Support</a></li>
+        </ul>
+
+        <div class="container footer-bottom clearfix">
+            <div class="copyright">
+                iCoder &copy; Copyright <strong><span>| Shippu Sharma |</span></strong> All Rights Reserved
+            </div>
+
+        </div>
+    </footer>
+    <!-- ======= Footer ======= -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
